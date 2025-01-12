@@ -22,5 +22,6 @@ Add the following to your `configuration.yaml` file:
 
     light:
       - platform: nano_ha
+        title: My Nanoleaf Light
         addr: <IP_ADDRESS>
         token: <AUTH_TOKEN>
