@@ -1,0 +1,21 @@
+#!/usr/bin/env python3
+import sys
+
+from nanoleafapi import Nanoleaf
+
+if len(sys.argv) < 2:
+    print("Usage: gen_token <ip>")
+    sys.exit(1)
+
+print("Connecting to Nanoleaf device..")
+try:
+    nl = Nanoleaf(sys.argv[1])
+
+    print("Generating new token..")
+    token = nl.create_auth_token()
+
+    print(f"\n     {token}\n")
+
+except Exception as e:
+    print(f"FAILED: {e}")
+

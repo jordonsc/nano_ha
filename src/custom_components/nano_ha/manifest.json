@@ -1,0 +1,10 @@
+{
+  "domain": "nano_ha",
+  "name": "Nano Assistant",
+  "codeowners": [],
+  "dependencies": [],
+  "documentation": "https://github.com/jordonsc/nano-ha",
+  "iot_class": "local_polling",
+  "requirements": ["nanoleafapi"],
+  "version": "0.1.0"
+}

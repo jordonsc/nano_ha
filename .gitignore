@@ -1,0 +1,9 @@
+*.pyc
+*.egg-info
+.idea
+build/*
+dist/*
+config/
+venv/
+
+!.gitkeep
