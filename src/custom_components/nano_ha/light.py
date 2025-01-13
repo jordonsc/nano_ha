@@ -87,6 +87,3 @@ class NanoLight(LightEntity):
         self._name = await self._hass.async_add_executor_job(self._nl.get_name)
         self._attr_is_on = await self._hass.async_add_executor_job(self._nl.get_power)
         self._attr_brightness = round(await self._hass.async_add_executor_job(self._nl.get_brightness) * 2.55)
-        #self._attr_color_mode = await self._hass.async_add_executor_job(self._nl.get_color_mode)
-        c_mode = await self._hass.async_add_executor_job(self._nl.get_color_mode)
-        print(f"Nanoleaf colour mode: {c_mode}")

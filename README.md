@@ -25,3 +25,13 @@ Add the following to your `configuration.yaml` file:
         title: My Nanoleaf Light
         addr: <IP_ADDRESS>
         token: <AUTH_TOKEN>
+
+Colour Modes
+------------
+I've hardcoded the lights to only support "brightness" colour mode. For light systems like Nanoleaf, this is actually
+the wrong approach as they should be using RBG, colour temp, etc - but a flaw in the design for Home Assistant is when
+a light system is using an "effect" like you'd typically do with Nanoleaf, it provides no option to simply change the
+brightness without including a colour/temp value, too.
+
+As I, personally, only want to change the brightness and on/off state via automation, this is perfect for me. If you
+need to use this stop-gap integration but need colour support, drop me a message and I can help out.
