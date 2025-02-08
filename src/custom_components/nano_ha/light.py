@@ -60,6 +60,12 @@ class NanoLight(LightEntity):
         return self._entity_name
 
     async def init_nl(self):
+        if self._nl is not None:
+            try:
+                await self._hass.async_add_executor_job(self._nl.check_connection)
+            except:
+                self._nl = None
+
         if self._nl is None:
             self._nl = await self._hass.async_add_executor_job(Nanoleaf, self._addr, self._token)
 
